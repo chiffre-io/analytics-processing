@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es2018",
-    "lib": ["DOM"],
+    "lib": ["DOM", "ES2019"],
     "module": "commonjs",
     "declaration": true,
     "outDir": "./dist",
@@ -29,5 +29,5 @@
     "emitDecoratorMetadata": true
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["./src/**/*.test.ts", "./dist", "./node_modules"]
+  "exclude": ["./dist", "./node_modules"]
 }

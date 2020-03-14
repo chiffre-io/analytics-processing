@@ -1,4 +1,4 @@
-**/*.test.ts
+**/*.test.*
 tsconfig.json
 .env
 .volumes/

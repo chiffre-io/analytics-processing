@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@47ng/codec@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@47ng/codec/-/codec-0.5.0.tgz#28294e5c76170ed9a1403a5bbbb9e129c11b94ce"
+  integrity sha512-k/+OCuagLqv52RLrbzrRv+4qL68Y/1xm1EGu4N0nUXTjzVHZ6YQmo/aWNDAChcL+CP+fyNq1BDqLttHDzbfzSA==
+  dependencies:
+    "@stablelib/base64" "^1.0.0"
+    "@stablelib/hex" "^1.0.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -150,12 +158,31 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@chiffre/analytics-core@^1.0.1":
+"@chiffre/analytics-core@^1.0.0", "@chiffre/analytics-core@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@chiffre/analytics-core/-/analytics-core-1.0.1.tgz#519f49162266f93fb4598c9f058f999b83a958fa"
   integrity sha512-OWrXpePCWreNr4ioryRv8YGyCANChiHiyaR+GPcyP+B388sE6a6NXN4Cb7o67Ow2TuVOkxdLlnKNcr+h0Yecxg==
   dependencies:
     nanoid "^2.1.11"
+
+"@chiffre/analytics-faker@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@chiffre/analytics-faker/-/analytics-faker-1.0.0.tgz#43e969d1fe674017f6c726eb475ec750c3686360"
+  integrity sha512-0zGMaqI+1pYdwcZLp24qrV7TViYcMZgxvYGh/AB6R9gfmn6Riebi1sRu+wtRJIhANjZS+0JoI5FCKdSc5d0c0w==
+  dependencies:
+    "@chiffre/analytics-core" "^1.0.0"
+    "@chiffre/crypto-box" "^1.0.1"
+    faker "^4.1.0"
+    ms "^2.1.2"
+    tapers "^0.1.0"
+
+"@chiffre/crypto-box@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@chiffre/crypto-box/-/crypto-box-1.0.1.tgz#5b084cfc24d5ffa04c1d4034671869c543c4b0dd"
+  integrity sha512-6ITQRROU/FbJKfbS3O4KvKUamsbLOV1M+4d4bvOYRJgVGbtogFhZWntdbtWV8E4qfHmKSuGFBj3R/agtGaN9iw==
+  dependencies:
+    "@47ng/codec" "^0.5.0"
+    tweetnacl "^1.0.3"
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -484,6 +511,16 @@
   integrity sha512-Debi3Baff1Qu1Unc3mjJ96MgpbwTn43S1+9yJ0llWygPwDNu2aaWBD6yc9y/Z8XDRNhx7U+u2UDg2OGQXkclUQ==
   dependencies:
     type-detect "4.0.8"
+
+"@stablelib/base64@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stablelib/base64/-/base64-1.0.0.tgz#e08ba78078c731cbbb244530b1750659c52ba7cb"
+  integrity sha512-s/wTc/3+vYSalh4gfayJrupzhT7SDBqNtiYOeEMlkSDqL/8cExh5FAeTzLpmYq+7BLLv36EjBL5xrb0bUHWJWQ==
+
+"@stablelib/hex@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stablelib/hex/-/hex-1.0.0.tgz#9f2d21d412803e72a3bbc0ab4690e9bda0ca91cf"
+  integrity sha512-EJ9oGiuaFw/Y0cBATTxo73sgqOgdnSmZ9ftU9FND9SD51OM8wvAfS78uPy3oBNmLWc/sZK5twMbEFf/A4T2F8A==
 
 "@types/babel__core@^7.1.0":
   version "7.1.6"
@@ -1544,6 +1581,11 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+faker@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-4.1.0.tgz#1e45bbbecc6774b3c195fad2835109c6d748cc3f"
+  integrity sha1-HkW7vsxndLPBlfrSg1EJxtdIzD8=
 
 fast-deep-equal@^3.1.1:
   version "3.1.1"
@@ -2878,7 +2920,7 @@ ms@2.0.0:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
 
-ms@^2.1.1:
+ms@^2.1.1, ms@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
@@ -3963,6 +4005,11 @@ symbol-tree@^3.2.2:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
+tapers@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tapers/-/tapers-0.1.0.tgz#6a1e1df6191f69d7932b51c2573f2f5704322f08"
+  integrity sha512-Ty85PgTmAI21Ze8vjmQrnHMliZDfRvq8hW58xwUSVAzsbQW6pT9QYWNFRyUPZQoyxIJ+WfTsJRN6CIVSsS0/FA==
+
 terminal-link@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/terminal-link/-/terminal-link-2.1.1.tgz#14a64a27ab3c0df933ea546fba55f2d078edc994"
@@ -4124,6 +4171,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+
+tweetnacl@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
+  integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
 
 type-check@~0.3.2:
   version "0.3.2"
