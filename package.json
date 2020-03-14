@@ -1,7 +1,7 @@
 {
-  "name": "@chiffre/template-library",
+  "name": "@chiffre/analytis-processing",
   "version": "0.0.0-semantically-released",
-  "description": "Template for Chiffre libraries",
+  "description": "Transform raw analytics data points into insightful metrics",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chiffre-io/template-library"
+    "url": "https://github.com/chiffre-io/analytis-processing"
   },
   "keywords": [
     "chiffre",
-    "template"
+    "analytics"
   ],
   "publishConfig": {
     "access": "public"
@@ -28,7 +28,10 @@
     "build": "run-s build:clean build:ts",
     "ci": "run-s build test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@chiffre/analytics-core": "^1.0.1",
+    "bowser": "^2.9.0"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^25.1.4",
