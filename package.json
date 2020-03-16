@@ -1,5 +1,5 @@
 {
-  "name": "@chiffre/analytis-processing",
+  "name": "@chiffre/analytics-processing",
   "version": "0.0.0-semantically-released",
   "description": "Transform raw analytics data points into insightful metrics",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chiffre-io/analytis-processing"
+    "url": "https://github.com/chiffre-io/analytics-processing"
   },
   "keywords": [
     "chiffre",
