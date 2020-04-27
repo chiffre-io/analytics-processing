@@ -29,7 +29,7 @@
     "ci": "run-s build test"
   },
   "dependencies": {
-    "@chiffre/analytics-core": "^1.0.1",
+    "@chiffre/analytics-core": "^1.2.0",
     "bowser": "^2.9.0"
   },
   "devDependencies": {
