@@ -33,7 +33,7 @@
     "bowser": "^2.9.0"
   },
   "devDependencies": {
-    "@chiffre/analytics-faker": "^1.0.0",
+    "@chiffre/analytics-faker": "^1.0.1",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.1",
