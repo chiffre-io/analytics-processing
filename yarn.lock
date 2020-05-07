@@ -228,13 +228,6 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@chiffre/analytics-core@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@chiffre/analytics-core/-/analytics-core-1.1.0.tgz#f38c3ad3e984d88f93d74f53b94dfe625bb9b629"
-  integrity sha512-Tt/EbxLRqu3SLw5QixKWQm9oF8x+NL0AYHkLNefTv2cIU5CCbhFoGNGx4B3PgsXChTbzBuSZca03ljvESD6l/A==
-  dependencies:
-    nanoid "^3.0.2"
-
 "@chiffre/analytics-core@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@chiffre/analytics-core/-/analytics-core-2.0.0.tgz#5304079a069d5eeae9e21ed0e0a7ad6132291d0b"
@@ -242,12 +235,12 @@
   dependencies:
     nanoid "^3.0.2"
 
-"@chiffre/analytics-faker@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@chiffre/analytics-faker/-/analytics-faker-1.0.0.tgz#43e969d1fe674017f6c726eb475ec750c3686360"
-  integrity sha512-0zGMaqI+1pYdwcZLp24qrV7TViYcMZgxvYGh/AB6R9gfmn6Riebi1sRu+wtRJIhANjZS+0JoI5FCKdSc5d0c0w==
+"@chiffre/analytics-faker@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@chiffre/analytics-faker/-/analytics-faker-1.0.1.tgz#bd8624fd25ff518368784d9aed30fbf4a93a7687"
+  integrity sha512-b7nJSRt8crPbdIlQZFEON2T3kmt9wRgA6DN0uh24ycZZeTVSDlZI/y3Z3n7+lxSHVPdDrEvd9ZmKLZGjgJl36w==
   dependencies:
-    "@chiffre/analytics-core" "^1.0.0"
+    "@chiffre/analytics-core" "^2.0.0"
     "@chiffre/crypto-box" "^1.0.1"
     faker "^4.1.0"
     ms "^2.1.2"
