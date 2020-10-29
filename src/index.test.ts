@@ -26,7 +26,7 @@ test('BrowserEventsProcessor', () => {
   const bep = new BrowserEventsProcessor()
   const events = Array(10)
     .fill(0)
-    .flatMap(() => generateFakeSession(Date.now()))
+    .flatMap(() => generateFakeSession())
     .sort((a, b) => a.time - b.time)
   events.forEach(event => bep.process(event))
   expect(bep.sessions.size).toEqual(10)
