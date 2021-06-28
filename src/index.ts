@@ -1,14 +1,16 @@
 import {
   BrowserEvent,
-  SessionData,
   GenericEvent,
-  isSessionStartEvent,
-  isGenericStringEvent,
+  isBrowserEvent,
   isGenericNumberEvent,
   isGenericNumbersEvent,
+  isGenericStringEvent,
   isGenericStringsEvent,
-  isBrowserEvent,
-  isSessionEndEvent
+  isSessionDNTEvent,
+  isSessionEndEvent,
+  isSessionNoScriptEvent,
+  isSessionStartEvent,
+  SessionData
 } from '@chiffre/analytics-core'
 import Bowser from 'bowser'
 
@@ -61,6 +63,8 @@ export interface ReturningVisitorInfo<E> {
 
 export class BrowserEventsProcessor {
   private _sessionMap: Map<string, BrowserEvent[]>
+  dnt: number
+  noscript: number
   browsers: CounterMap
   pageCount: CounterMap
   referrers: CounterMap
@@ -80,6 +84,8 @@ export class BrowserEventsProcessor {
     this.lang = new CounterMap()
     this.viewportWidth = new CounterMap<number>()
     this.browsers = new CounterMap()
+    this.dnt = 0
+    this.noscript = 0
   }
 
   public process(event: BrowserEvent) {
@@ -104,6 +110,10 @@ export class BrowserEventsProcessor {
       this.lang.count(event.data.lang)
       this.viewportWidth.count(event.data.vp.w)
       this.browsers.count(ua.browser.name || 'N.A.')
+    } else if (isSessionDNTEvent(event)) {
+      this.dnt += 1
+    } else if (isSessionNoScriptEvent(event)) {
+      this.noscript += 1
     }
   }
 
@@ -119,16 +129,16 @@ export class BrowserEventsProcessor {
             return [sid, 0]
           }
           // For events sorted by time:
-          const min = events[0].time
-          const max = events[events.length - 1].time
+          // const min = events[0].time
+          // const max = events[events.length - 1].time
           // For unsorted events:
-          // const { min, max } = events.reduce(
-          //   ({ min, max }, event) => ({
-          //     max: Math.max(max, event.time),
-          //     min: Math.min(min, event.time)
-          //   }),
-          //   { min: Infinity, max: 0 }
-          // )
+          const { min, max } = events.reduce(
+            ({ min, max }, event) => ({
+              max: Math.max(max, event.time),
+              min: Math.min(min, event.time)
+            }),
+            { min: Infinity, max: 0 }
+          )
           return [sid, max - min]
         })
         .sort((a, b) => a[1] - b[1])
